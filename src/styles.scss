@@ -1,0 +1,366 @@
+/**** START OF STYLES SHEET ****/
+
+/* variables */
+$header-font: Raleway;
+$primary-font: Merriweather;
+$button-font: Merriweather;
+$bg-light-green: #ebf8ee;
+$bg-light-orange: #fff5e6;
+$bg-green: #d8f1de;
+$bg-orange: #ff9500;
+$bg-to-top-icon: #ffe497;
+$text-orange: #ff8000;
+$text-dark-green: #004d4d;
+$border-orange-yellow: #ffba0080;
+$menu-avater-yellow: #ffe497;
+$menu-avater-yellow-hover: #fdca53;
+$white: #ffffff;
+
+/* global styles */
+%lightGreenBg {
+  background: $bg-light-green !important;
+}
+
+%lightOrangeBg {
+  background: $bg-light-orange !important;
+}
+
+%greenBg {
+  background: $bg-green !important;
+}
+
+%headerFontSet {
+  font-family: $header-font;
+}
+
+%bodyFontSet {
+  font-family: $primary-font;
+}
+
+%btnFontSet {
+  font-family: $button-font;
+}
+
+%flatCard {
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollUpIcon {
+  position: fixed !important;
+  width: 50px;
+  height: 50px;
+  color: $white !important;
+  background: $menu-avater-yellow !important;
+  border-radius: 50%;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+}
+
+.scrollUpIcon:hover {
+  background: $menu-avater-yellow-hover !important;
+}
+
+/* top button list */
+.topCard {
+  @extend %lightGreenBg;
+  @extend %flatCard;
+  padding: 12px 0px;
+}
+
+.linkBtn {
+  @extend %btnFontSet;
+  background: $menu-avater-yellow-hover !important;
+  color: $white !important;
+  height: 26px !important;
+  width: 100px;
+  float: right;
+  font-weight: 600;
+  margin-right: 6px;
+  .v-icon {
+    margin-right: 3px;
+  }
+
+  /* suppress original button styles */
+  letter-spacing: 0px !important;
+  text-indent: 0px !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+}
+
+/* side bar - link to page content */
+#menu {
+  position: fixed;
+  left: 0;
+  top: 36%;
+  width: 20px;
+  margin: 2px 0 0 0;
+  z-index: 5;
+  color: $white;
+  font-weight: bold;
+  font-size: large;
+  text-align: left;
+  border-right: none;
+  padding: 10px;
+}
+#menu .v-avatar {
+  height: 24px  !important;
+  min-width: 24px  !important;
+  width: 24px  !important;
+  background-color:$menu-avater-yellow !important;
+  border-color: $menu-avater-yellow !important;
+  .sidebar-link-text {
+    @extend %btnFontSet;
+    font-size: 14px;
+    color: $menu-avater-yellow !important;
+    
+  }
+}
+#menu .v-avatar:hover {
+  min-width: 120px  !important;
+  border-radius: 25px !important;
+  background-color: $menu-avater-yellow-hover !important;
+  border-color: $menu-avater-yellow-hover !important;
+  transition: all .2s ease-in-out;
+  color: $white !important;
+  .sidebar-link-text {
+    @extend %btnFontSet;
+    font-size: 14px;
+    color: $white !important;
+    transition: .2s !important;
+  }
+}
+#menu a {
+  color: inherit;
+}
+#menu {
+  position: absolute;
+}
+* > #menu {
+  position: fixed;
+}
+
+/* footer */
+.footerCard {
+  @extend %lightGreenBg;
+  @extend %headerFontSet;
+  @extend %flatCard;
+  padding: 8px;
+  text-align: center;
+}
+
+/* page title card */
+.headerCard {
+  @extend %lightOrangeBg;
+  @extend %headerFontSet;
+  @extend %flatCard;
+}
+
+.headerTitleBlock {
+  margin: 20px 0px 20px 80px;
+}
+
+.headerTitle {
+  @extend %bodyFontSet;
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 40px;
+  color: $text-dark-green !important;
+}
+
+.headerPicCol {
+  padding: 0px !important;
+}
+
+.headerPic {
+  float: right;
+}
+
+/* page content */
+.sectionTitleCardFirst {
+  @extend %bodyFontSet;
+  background: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  padding: 12px 0px 8px;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0px 0px 8px;
+  color: $text-dark-green !important;
+}
+
+.sectionTitleCard {
+  @extend %bodyFontSet;
+  background: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  padding: 12px 0px 8px;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 36px 0px 8px;
+  color: $text-dark-green !important;
+}
+
+.baseContainer {
+  @extend %lightGreenBg;
+}
+
+.bodyContainer {
+  margin: 20px 80px;
+}
+
+.bodyCardContainer {
+  @extend %bodyFontSet;
+  box-shadow: none !important;
+  margin: 5px 0px 20px !important;
+  padding: 20px 50px !important;
+}
+
+.sectionContentCard {
+  border-radius: 20px !important;
+}
+
+.bodyCardDateText {
+  font-family: "Noto Sans TC", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $text-orange;
+}
+
+.bodyCardTitle {
+  font-size: 20px;
+}
+
+.bodyCardTitleCenter {
+  font-size: 20px;
+  text-align: center !important;
+}
+
+.bodyCardText {
+  @extend %headerFontSet;
+  font-size: 16px;
+  margin-top: 14px;
+}
+
+.bodyCardTextList {
+  @extend %headerFontSet;
+  font-size: 16px;
+}
+
+.aboutMeBodyContainer {
+  margin: 5px 0px 0px 5px !important;
+}
+
+.aboutMeFlex {
+  padding-bottom: 20px;
+}
+
+/* section: about me */
+.aboutMeCard {
+  @extend %bodyFontSet;
+  margin: 10px;
+  border-radius: 20px !important;
+  text-align: center;
+  padding: 40px !important;
+  height: 100%;
+  .v-image {
+    border: 8px groove $border-orange-yellow;
+  }
+}
+
+/* section: work experience */
+.bodyCardAvatarWorkExp {
+  text-align: center;
+  .v-image {
+    border: 8px groove $border-orange-yellow;
+  }
+}
+
+/* section: skills & abilities */
+.skillCard {
+  margin: 0px 5px 10px;
+  .v-card__title {
+    padding-top: 0px;
+    font-size: 18px;
+  }
+}
+
+%skillChip {
+  height: 26px !important;
+  margin: 2px 4px;
+}
+
+.skillChip {
+  @extend %skillChip;
+  background: $bg-orange !important;
+  color: $white !important;
+}
+
+.scratchCard {
+  height: 97%;
+  margin: 10px;
+}
+
+%langSkillCard {
+  @extend %bodyFontSet;
+  text-align: left;
+  border-radius: 20px !important;
+  :nth-child(1),
+  :nth-child(2) {
+    border-radius: 0px !important;
+  }
+  padding: 40px !important;
+}
+
+.langBodyContainer {
+  margin: 10px !important;
+}
+
+/*
+.toolProcessBodyContainer {
+  @extend %bodyFontSet;
+  box-shadow: none !important;
+  margin: 10px 20px 10px !important;
+  padding: 20px 50px !important;
+}
+*/
+
+.engSkillCard {
+  @extend %langSkillCard;
+  height: 65%;
+}
+
+.engSkillExpand {
+  .v-expansion-panel-content__wrap {
+    text-align: left !important;
+  }
+}
+
+.chiSkillCard {
+  @extend %langSkillCard;
+  margin-top: 20px;
+  height: 30%;
+}
+
+/* section: education */
+.bodyCardAvatarEdu {
+  text-align: center;
+  .v-image {
+    border: 8px ridge $border-orange-yellow;
+  }
+}
+
+/* section: qualification */
+.bodyCardAvatarQual {
+  text-align: center;
+  .v-image {
+    border: 8px ridge $border-orange-yellow;
+  }
+}
+
+/**** END OF STYLES SHEET ****/
