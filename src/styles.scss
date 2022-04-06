@@ -145,6 +145,10 @@ html {
   position: fixed;
 }
 
+a:-webkit-any-link{
+  text-decoration: none !important;
+}
+
 /* footer */
 .footerCard {
   @extend %lightGreenBg;
